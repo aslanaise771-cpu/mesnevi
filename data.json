@@ -1,0 +1,81 @@
+{
+  "site": {
+    "baslik": "Yapay Zeka Mühendisliği",
+    "logo": "YZ Mühendisliği",
+    "aciklama": "Yapay zeka mühendisliği nedir, ne iş yapar, nasıl olunur? Geleceğin mesleğini keşfet."
+  },
+  "menu": [
+    { "ad": "Hakkında", "hedef": "hakkinda" },
+    { "ad": "Alanlar", "hedef": "alanlar" },
+    { "ad": "Beceriler", "hedef": "beceriler" },
+    { "ad": "Yol Haritası", "hedef": "yol" },
+    { "ad": "SSS", "hedef": "sss" },
+    { "ad": "İletişim", "hedef": "iletisim" }
+  ],
+  "hero": {
+    "ust": "Geleceğin Mesleği",
+    "baslik": "Makinelere düşünmeyi öğreten mühendislik",
+    "metin": "Yapay zeka mühendisleri; veriden öğrenen, konuşan, gören ve karar veren sistemler tasarlar. Bu sitede mesleği tüm yönleriyle tanıyacaksın.",
+    "buton": "Keşfetmeye Başla",
+    "istatistikler": [
+      { "sayi": "97M+", "etiket": "YZ kaynaklı yeni iş (tahmini)" },
+      { "sayi": "%40", "etiket": "Yıllık sektör büyümesi" },
+      { "sayi": "∞", "etiket": "Uygulama alanı" }
+    ]
+  },
+  "hakkinda": {
+    "baslik": "Yapay Zeka Mühendisliği Nedir?",
+    "paragraflar": [
+      "Yapay zeka mühendisliği; bilgisayar bilimi, matematik ve istatistiği birleştirerek insan zekasını taklit eden sistemler geliştiren bir mühendislik dalıdır.",
+      "Bir yapay zeka mühendisi veriyi toplar, temizler, bu veriden öğrenen modeller kurar, modelleri test eder ve gerçek hayatta çalışan ürünlere dönüştürür.",
+      "Sağlıktan otomotive, eğitimden sanata kadar neredeyse her sektörde yapay zeka mühendislerine ihtiyaç duyulmaktadır."
+    ]
+  },
+  "alanlar": {
+    "baslik": "Çalışma Alanları",
+    "liste": [
+      { "ikon": "🧠", "ad": "Makine Öğrenmesi", "aciklama": "Verilerden örüntü öğrenerek tahmin yapan algoritmalar geliştirme." },
+      { "ikon": "👁️", "ad": "Bilgisayarlı Görü", "aciklama": "Görüntü ve videolardan nesne, yüz ve hareket tanıma." },
+      { "ikon": "💬", "ad": "Doğal Dil İşleme", "aciklama": "Sohbet botları, çeviri ve metin anlama sistemleri." },
+      { "ikon": "🤖", "ad": "Robotik", "aciklama": "Çevresini algılayıp kendi kararını veren robotlar." },
+      { "ikon": "🏥", "ad": "Sağlıkta YZ", "aciklama": "Hastalık teşhisi, ilaç keşfi ve tıbbi görüntü analizi." },
+      { "ikon": "🚗", "ad": "Otonom Araçlar", "aciklama": "Sürücüsüz araçlar ve akıllı ulaşım sistemleri." }
+    ]
+  },
+  "beceriler": {
+    "baslik": "Gerekli Beceriler",
+    "liste": [
+      { "ad": "Python Programlama", "seviye": 95 },
+      { "ad": "Matematik (Lineer Cebir, Olasılık)", "seviye": 85 },
+      { "ad": "Veri Analizi", "seviye": 80 },
+      { "ad": "Problem Çözme", "seviye": 90 },
+      { "ad": "İngilizce", "seviye": 75 },
+      { "ad": "Takım Çalışması", "seviye": 70 }
+    ]
+  },
+  "yol": {
+    "baslik": "Nasıl Yapay Zeka Mühendisi Olunur?",
+    "adimlar": [
+      { "baslik": "Ortaokul & Lise", "metin": "Matematik ve fen derslerine önem ver, Scratch ve Python ile kodlamaya başla." },
+      { "baslik": "Projeler Üret", "metin": "Basit yapay zeka projeleri yap, bilim fuarlarına ve yarışmalara (TEKNOFEST vb.) katıl." },
+      { "baslik": "Üniversite", "metin": "Yapay Zeka Mühendisliği, Bilgisayar Mühendisliği veya Yazılım Mühendisliği bölümlerini tercih et." },
+      { "baslik": "Uzmanlaş", "metin": "Staj yap, açık kaynak projelere katkı ver, bir alanda derinleş." },
+      { "baslik": "Kariyer", "metin": "Teknoloji şirketlerinde, araştırma merkezlerinde veya kendi girişiminde çalış." }
+    ]
+  },
+  "sss": {
+    "baslik": "Sıkça Sorulan Sorular",
+    "liste": [
+      { "soru": "Yapay zeka mühendisi olmak için dahi olmak gerekir mi?", "cevap": "Hayır. Merak, düzenli çalışma ve problem çözme isteği en önemli özelliklerdir." },
+      { "soru": "Hangi programlama dilini öğrenmeliyim?", "cevap": "Python en popüler başlangıç dilidir. Kütüphaneleri sayesinde yapay zeka projeleri için idealdir." },
+      { "soru": "Yapay zeka insanların işini elinden alacak mı?", "cevap": "Bazı işler değişecek, ancak yapay zekayı geliştiren ve yöneten yeni meslekler de ortaya çıkıyor." },
+      { "soru": "Kaç yaşında başlayabilirim?", "cevap": "Hemen şimdi! Blok tabanlı kodlama ve eğitim platformlarıyla her yaşta başlanabilir." }
+    ]
+  },
+  "iletisim": {
+    "baslik": "İletişim",
+    "metin": "Soruların veya önerilerin için bize ulaşabilirsin.",
+    "eposta": "bilsemesenler@gmail.com"
+  },
+  "footer": "© 2026 Yapay Zeka Mühendisliği Projesi. Tüm hakları saklıdır."
+}
