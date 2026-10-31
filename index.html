@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yapay Zeka Mühendisliği</title>
+  <meta name="description" content="Yapay zeka mühendisliği mesleğini tanıtan web sitesi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="arka-plan"></div>
+
+  <header class="ust-bar">
+    <div class="kap">
+      <a href="#" class="logo" id="logo">YZ</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Menü">☰</button>
+      <nav id="menu"></nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero kap" id="hero"></section>
+
+    <section class="bolum kap" id="hakkinda"></section>
+    <section class="bolum kap" id="alanlar"></section>
+    <section class="bolum kap" id="beceriler"></section>
+    <section class="bolum kap" id="yol"></section>
+    <section class="bolum kap" id="sss"></section>
+    <section class="bolum kap" id="iletisim"></section>
+  </main>
+
+  <footer class="alt" id="footer"></footer>
+
+  <script>
+    fetch('data.json')
+      .then(r => r.json())
+      .then(d => olustur(d))
+      .catch(() => {
+        document.getElementById('hero').innerHTML =
+          '<p class="hata">data.json yüklenemedi. Siteyi bir sunucu üzerinden (Netlify veya VS Code Live Server) açın.</p>';
+      });
+
+    function olustur(d) {
+      document.title = d.site.baslik;
+      document.getElementById('logo').textContent = d.site.logo;
+
+      // Menü
+      document.getElementById('menu').innerHTML =
+        d.menu.map(m => `<a href="#${m.hedef}">${m.ad}</a>`).join('');
+
+      // Hero
+      document.getElementById('hero').innerHTML = `
+        <span class="etiket">${d.hero.ust}</span>
+        <h1>${d.hero.baslik}</h1>
+        <p class="hero-metin">${d.hero.metin}</p>
+        <a href="#hakkinda" class="btn">${d.hero.buton}</a>
+        <div class="istatistik">
+          ${d.hero.istatistikler.map(i => `
+            <div><strong>${i.sayi}</strong><span>${i.etiket}</span></div>`).join('')}
+        </div>`;
+
+      // Hakkında
+      document.getElementById('hakkinda').innerHTML = `
+        <h2>${d.hakkinda.baslik}</h2>
+        <div class="hakkinda-metin">
+          ${d.hakkinda.paragraflar.map(p => `<p>${p}</p>`).join('')}
+        </div>`;
+
+      // Alanlar
+      document.getElementById('alanlar').innerHTML = `
+        <h2>${d.alanlar.baslik}</h2>
+        <div class="kartlar">
+          ${d.alanlar.liste.map(a => `
+            <article class="kart gorunur-ol">
+              <div class="ikon">${a.ikon}</div>
+              <h3>${a.ad}</h3>
+              <p>${a.aciklama}</p>
+            </article>`).join('')}
+        </div>`;
+
+      // Beceriler
+      document.getElementById('beceriler').innerHTML = `
+        <h2>${d.beceriler.baslik}</h2>
+        <div class="beceri-liste">
+          ${d.beceriler.liste.map(b => `
+            <div class="beceri">
+              <div class="beceri-ust"><span>${b.ad}</span><span>%${b.seviye}</span></div>
+              <div class="cubuk"><div class="dolu" data-seviye="${b.seviye}"></div></div>
+            </div>`).join('')}
+        </div>`;
+
+      // Yol haritası
+      document.getElementById('yol').innerHTML = `
+        <h2>${d.yol.baslik}</h2>
+        <ol class="zaman">
+          ${d.yol.adimlar.map((a, i) => `
+            <li class="gorunur-ol">
+              <span class="no">${i + 1}</span>
+              <div><h3>${a.baslik}</h3><p>${a.metin}</p></div>
+            </li>`).join('')}
+        </ol>`;
+
+      // SSS
+      document.getElementById('sss').innerHTML = `
+        <h2>${d.sss.baslik}</h2>
+        <div class="sss-liste">
+          ${d.sss.liste.map(s => `
+            <details><summary>${s.soru}</summary><p>${s.cevap}</p></details>`).join('')}
+        </div>`;
+
+      // İletişim
+      document.getElementById('iletisim').innerHTML = `
+        <div class="iletisim-kutu">
+          <h2>${d.iletisim.baslik}</h2>
+          <p>${d.iletisim.metin}</p>
+          <a class="btn" href="mailto:${d.iletisim.eposta}">${d.iletisim.eposta}</a>
+        </div>`;
+
+      document.getElementById('footer').textContent = d.footer;
+
+      animasyonlar();
+    }
+
+    function animasyonlar() {
+      const gozlemci = new IntersectionObserver(girdiler => {
+        girdiler.forEach(g => {
+          if (!g.isIntersecting) return;
+          g.target.classList.add('goster');
+          if (g.target.classList.contains('dolu')) {
+            g.target.style.width = g.target.dataset.seviye + '%';
+          }
+          gozlemci.unobserve(g.target);
+        });
+      }, { threshold: 0.2 });
+      document.querySelectorAll('.gorunur-ol, .dolu').forEach(e => gozlemci.observe(e));
+    }
+
+    // Mobil menü
+    const menu = document.getElementById('menu');
+    document.getElementById('menuBtn').addEventListener('click', () => menu.classList.toggle('acik'));
+    menu.addEventListener('click', e => { if (e.target.tagName === 'A') menu.classList.remove('acik'); });
+  </script>
+</body>
+</html>
