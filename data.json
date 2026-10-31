@@ -1,75 +1,103 @@
 {
   "site": {
-    "baslik": "Yapay Zeka Mühendisliği",
-    "logo": "YZ Mühendisliği",
-    "aciklama": "Yapay zeka mühendisliği nedir, ne iş yapar, nasıl olunur? Geleceğin mesleğini keşfet."
+    "baslik": "Mevlânâ ve Mesnevî",
+    "logo": "Mevlânâ & Mesnevî"
   },
   "menu": [
-    { "ad": "Hakkında", "hedef": "hakkinda" },
-    { "ad": "Alanlar", "hedef": "alanlar" },
-    { "ad": "Beceriler", "hedef": "beceriler" },
-    { "ad": "Yol Haritası", "hedef": "yol" },
+    { "ad": "Mevlânâ", "hedef": "hakkinda" },
+    { "ad": "Hayatı", "hedef": "hayat" },
+    { "ad": "Mesnevî", "hedef": "mesnevi" },
+    { "ad": "Hikâyeler", "hedef": "hikayeler" },
+    { "ad": "Eserleri", "hedef": "eserler" },
     { "ad": "SSS", "hedef": "sss" },
     { "ad": "İletişim", "hedef": "iletisim" }
   ],
   "hero": {
-    "ust": "Geleceğin Mesleği",
-    "baslik": "Makinelere düşünmeyi öğreten mühendislik",
-    "metin": "Yapay zeka mühendisleri; veriden öğrenen, konuşan, gören ve karar veren sistemler tasarlar. Bu sitede mesleği tüm yönleriyle tanıyacaksın.",
+    "ust": "1207 – 1273",
+    "baslik": "Mevlânâ Celâleddîn-i Rûmî ve Mesnevî",
+    "metin": "Sevgiyi, hoşgörüyü ve olgunlaşmayı anlatan büyük düşünür Mevlânâ'yı ve onun ölümsüz eseri Mesnevî'yi tanıyın.",
     "buton": "Keşfetmeye Başla",
     "istatistikler": [
-      { "sayi": "97M+", "etiket": "YZ kaynaklı yeni iş (tahmini)" },
-      { "sayi": "%40", "etiket": "Yıllık sektör büyümesi" },
-      { "sayi": "∞", "etiket": "Uygulama alanı" }
+      { "sayi": "6", "etiket": "Cilt" },
+      { "sayi": "~25.600", "etiket": "Beyit" },
+      { "sayi": "750+", "etiket": "Yıllık miras" }
     ]
   },
   "hakkinda": {
-    "baslik": "Yapay Zeka Mühendisliği Nedir?",
+    "baslik": "Mevlânâ Kimdir?",
     "paragraflar": [
-      "Yapay zeka mühendisliği; bilgisayar bilimi, matematik ve istatistiği birleştirerek insan zekasını taklit eden sistemler geliştiren bir mühendislik dalıdır.",
-      "Bir yapay zeka mühendisi veriyi toplar, temizler, bu veriden öğrenen modeller kurar, modelleri test eder ve gerçek hayatta çalışan ürünlere dönüştürür.",
-      "Sağlıktan otomotive, eğitimden sanata kadar neredeyse her sektörde yapay zeka mühendislerine ihtiyaç duyulmaktadır."
+      "Mevlânâ Celâleddîn-i Rûmî, 30 Eylül 1207'de bugünkü Afganistan sınırları içindeki Belh şehrinde doğdu. Babası, 'Sultânü'l-Ulemâ' (âlimlerin sultanı) olarak bilinen Bahâeddin Veled'dir.",
+      "Ailesi Moğol tehlikesi nedeniyle Belh'ten ayrıldı ve uzun bir yolculuğun ardından Anadolu Selçuklu Devleti'nin başkenti Konya'ya yerleşti. Mevlânâ hayatının büyük bölümünü burada geçirdi.",
+      "'Mevlânâ' efendimiz anlamına gelir. 'Rûmî' ise Anadolu'da (Diyar-ı Rûm) yaşadığı için verilmiş bir lakaptır. Eserlerinde sevgi, hoşgörü, insanın olgunlaşması ve Allah'a yakınlık temalarını işlemiştir."
     ]
   },
-  "alanlar": {
-    "baslik": "Çalışma Alanları",
-    "liste": [
-      { "ikon": "🧠", "ad": "Makine Öğrenmesi", "aciklama": "Verilerden örüntü öğrenerek tahmin yapan algoritmalar geliştirme." },
-      { "ikon": "👁️", "ad": "Bilgisayarlı Görü", "aciklama": "Görüntü ve videolardan nesne, yüz ve hareket tanıma." },
-      { "ikon": "💬", "ad": "Doğal Dil İşleme", "aciklama": "Sohbet botları, çeviri ve metin anlama sistemleri." },
-      { "ikon": "🤖", "ad": "Robotik", "aciklama": "Çevresini algılayıp kendi kararını veren robotlar." },
-      { "ikon": "🏥", "ad": "Sağlıkta YZ", "aciklama": "Hastalık teşhisi, ilaç keşfi ve tıbbi görüntü analizi." },
-      { "ikon": "🚗", "ad": "Otonom Araçlar", "aciklama": "Sürücüsüz araçlar ve akıllı ulaşım sistemleri." }
-    ]
-  },
-  "beceriler": {
-    "baslik": "Gerekli Beceriler",
-    "liste": [
-      { "ad": "Python Programlama", "seviye": 95 },
-      { "ad": "Matematik (Lineer Cebir, Olasılık)", "seviye": 85 },
-      { "ad": "Veri Analizi", "seviye": 80 },
-      { "ad": "Problem Çözme", "seviye": 90 },
-      { "ad": "İngilizce", "seviye": 75 },
-      { "ad": "Takım Çalışması", "seviye": 70 }
-    ]
-  },
-  "yol": {
-    "baslik": "Nasıl Yapay Zeka Mühendisi Olunur?",
+  "hayat": {
+    "baslik": "Hayatından Önemli Duraklar",
     "adimlar": [
-      { "baslik": "Ortaokul & Lise", "metin": "Matematik ve fen derslerine önem ver, Scratch ve Python ile kodlamaya başla." },
-      { "baslik": "Projeler Üret", "metin": "Basit yapay zeka projeleri yap, bilim fuarlarına ve yarışmalara (TEKNOFEST vb.) katıl." },
-      { "baslik": "Üniversite", "metin": "Yapay Zeka Mühendisliği, Bilgisayar Mühendisliği veya Yazılım Mühendisliği bölümlerini tercih et." },
-      { "baslik": "Uzmanlaş", "metin": "Staj yap, açık kaynak projelere katkı ver, bir alanda derinleş." },
-      { "baslik": "Kariyer", "metin": "Teknoloji şirketlerinde, araştırma merkezlerinde veya kendi girişiminde çalış." }
+      { "yil": "1207", "baslik": "Belh'te Doğumu", "metin": "Horasan bölgesindeki Belh şehrinde, âlim bir ailenin çocuğu olarak dünyaya geldi." },
+      { "yil": "1228", "baslik": "Konya'ya Yerleşme", "metin": "Selçuklu Sultanı I. Alâeddin Keykubad'ın daveti üzerine aile Konya'ya yerleşti." },
+      { "yil": "1231", "baslik": "Babasının Vefatı", "metin": "Babası Bahâeddin Veled'in vefatından sonra onun yerine ders vermeye başladı." },
+      { "yil": "1244", "baslik": "Şems-i Tebrîzî ile Tanışma", "metin": "Şems ile karşılaşması hayatında büyük bir dönüm noktası oldu; Mevlânâ'nın şiir dünyası bu dostlukla şekillendi." },
+      { "yil": "1258 sonrası", "baslik": "Mesnevî'nin Yazılması", "metin": "Öğrencisi Hüsâmeddin Çelebi'nin isteği üzerine Mesnevî'yi söylemeye başladı; Çelebi beyitleri yazıya geçirdi." },
+      { "yil": "1273", "baslik": "Şeb-i Arûs", "metin": "17 Aralık 1273'te Konya'da vefat etti. Ölümünü sevgiliye kavuşma olarak gördüğü için bu geceye 'düğün gecesi' anlamında Şeb-i Arûs denir." }
+    ]
+  },
+  "mesnevi": {
+    "baslik": "Mesnevî Nedir?",
+    "paragraflar": [
+      "Mesnevî, Mevlânâ'nın en büyük eseridir. Farsça yazılmıştır ve altı ciltten (defter) oluşur. Toplamda yaklaşık 25.600 beyit içerir.",
+      "'Mesnevî' aslında bir şiir türünün adıdır: her beytin kendi içinde kafiyeli olduğu uzun manzumelere mesnevî denir. Mevlânâ'nın eseri bu türün en ünlü örneği olduğu için bu adla anılır.",
+      "Eser, hikâyeler içinde hikâyeler anlatarak ders verir. Hayvan masalları, peygamber kıssaları ve günlük hayattan sahneler aracılığıyla insanın kendini tanıması ve olgunlaşması anlatılır."
+    ],
+    "bilgiler": [
+      { "baslik": "Dili", "deger": "Farsça" },
+      { "baslik": "Bölümleri", "deger": "6 cilt (defter)" },
+      { "baslik": "Beyit Sayısı", "deger": "~25.600" },
+      { "baslik": "Kâtibi", "deger": "Hüsâmeddin Çelebi" }
+    ],
+    "ney": {
+      "baslik": "Ney'in Hikâyesi",
+      "metin": "Mesnevî, kamışlıktan koparılmış bir neyin iniltisiyle başlar. İlk 18 beyitten oluşan bu bölüme 'Neyname' denir. Ney, ait olduğu yerden ayrı düşmüş insanı simgeler. Neyin yanık sesi, insanın özüne dönme özleminin sesidir."
+    }
+  },
+  "hikayeler": {
+    "baslik": "Mesnevî'den Hikâyeler",
+    "liste": [
+      { "ikon": "🐘", "ad": "Karanlıkta Fil", "aciklama": "Karanlık bir odadaki fili elleriyle yoklayan insanlar, dokundukları yere göre filin bir boru, bir sütun ya da bir yelpaze olduğunu sanır. Ders: Parçaya bakan bütünü göremez." },
+      { "ikon": "🦜", "ad": "Bakkal ile Papağan", "aciklama": "Papağan yanlışlıkla yağ şişelerini döker ve bakkal ona kızar. Papağan sonra kel bir adamı görünce onun da yağ döktüğünü sanır. Ders: Kendi durumunla başkasını kıyaslayıp aceleyle yargılama." },
+      { "ikon": "🐑", "ad": "Hz. Mûsâ ile Çoban", "aciklama": "Saf bir çobanın kendi diliyle ettiği duayı Mûsâ beğenmez, ama Allah çobanın samimi kalbine bakar. Ders: Allah sözün süsüne değil kalbin içtenliğine bakar." },
+      { "ikon": "👑", "ad": "Padişah ile Cariye", "aciklama": "Mesnevî'nin ilk hikâyesidir. Doktorların iyileştiremediği hastalığın gerçek sebebini gönül hekimi bulur. Ders: Asıl derman gönülde aranmalıdır." },
+      { "ikon": "🦁", "ad": "Aslan ile Tavşan", "aciklama": "Ormanın hayvanlarına zulmeden aslanı küçük bir tavşan zekâsıyla kuyuya düşürür. Ders: Akıl ve tedbir, kaba güçten üstündür." },
+      { "ikon": "🍇", "ad": "Üzüm Kavgası", "aciklama": "Bir Türk, bir Arap, bir Rum ve bir Acem aynı şeyi, yani üzümü istedikleri hâlde dilleri farklı olduğu için kavga ederler. Ders: Anlaşmazlıkların çoğu sözlerden doğar, özde birlik vardır." }
+    ]
+  },
+  "eserler": {
+    "baslik": "Mevlânâ'nın Diğer Eserleri",
+    "liste": [
+      { "ad": "Dîvân-ı Kebîr", "aciklama": "Gazel ve rubailerden oluşan büyük şiir divanı. Şems'e duyduğu sevgiyle yazdığı şiirleri içerir." },
+      { "ad": "Fîhi Mâ Fîh", "aciklama": "Sohbetlerinin derlendiği düzyazı eser. Adı 'Ne varsa içindedir' anlamına gelir." },
+      { "ad": "Mektûbât", "aciklama": "Devlet adamlarına, dostlarına ve ailesine yazdığı mektuplar." },
+      { "ad": "Mecâlis-i Seb'a", "aciklama": "Verdiği yedi vaazın (meclisin) bir araya getirildiği eser." }
+    ]
+  },
+  "temalar": {
+    "baslik": "Öğretisinin Temelleri",
+    "liste": [
+      { "ikon": "❤️", "ad": "Aşk", "aciklama": "Mevlânâ'ya göre insanı olgunlaştıran en büyük güç sevgidir." },
+      { "ikon": "🤝", "ad": "Hoşgörü", "aciklama": "İnsanlara sevgiyle bakmak ve onları oldukları gibi kabul etmek." },
+      { "ikon": "🌱", "ad": "Olgunlaşma", "aciklama": "Hayatı 'Hamdım, piştim, yandım' sözleriyle özetlediği rivayet edilir: ham insanın zamanla pişip olgunlaşması." },
+      { "ikon": "✺", "ad": "Semâ", "aciklama": "Mevlevîlerin dönerek yaptığı zikir. UNESCO Somut Olmayan Kültürel Miras listesinde yer alır." }
     ]
   },
   "sss": {
     "baslik": "Sıkça Sorulan Sorular",
     "liste": [
-      { "soru": "Yapay zeka mühendisi olmak için dahi olmak gerekir mi?", "cevap": "Hayır. Merak, düzenli çalışma ve problem çözme isteği en önemli özelliklerdir." },
-      { "soru": "Hangi programlama dilini öğrenmeliyim?", "cevap": "Python en popüler başlangıç dilidir. Kütüphaneleri sayesinde yapay zeka projeleri için idealdir." },
-      { "soru": "Yapay zeka insanların işini elinden alacak mı?", "cevap": "Bazı işler değişecek, ancak yapay zekayı geliştiren ve yöneten yeni meslekler de ortaya çıkıyor." },
-      { "soru": "Kaç yaşında başlayabilirim?", "cevap": "Hemen şimdi! Blok tabanlı kodlama ve eğitim platformlarıyla her yaşta başlanabilir." }
+      { "soru": "Mesnevî hangi dilde yazılmıştır?", "cevap": "Farsça yazılmıştır. O dönemde Anadolu Selçuklu sarayında edebiyat ve ilim dili Farsçaydı. Bugün Türkçe dahil pek çok dile çevrilmiştir." },
+      { "soru": "'Gel, gel, ne olursan ol yine gel' sözü Mevlânâ'ya mı ait?", "cevap": "Bu söz Mevlânâ'yla özdeşleşmiştir, ancak araştırmacılar onun eserlerinde bulunmadığını ve daha önce yaşamış bir sûfîye, Ebû Saîd-i Ebu'l-Hayr'a ait olduğunu belirtir. Yine de Mevlânâ'nın hoşgörü anlayışını iyi yansıttığı için onun adıyla anılır." },
+      { "soru": "Şeb-i Arûs nedir?", "cevap": "Mevlânâ'nın vefat ettiği 17 Aralık gecesidir. Ölümü sevgiliye kavuşma saydığı için 'düğün gecesi' denir. Her yıl Konya'da anma törenleri yapılır." },
+      { "soru": "Mevlânâ'nın türbesi nerede?", "cevap": "Konya'dadır. Yeşil kubbesiyle bilinen türbe (Kubbe-i Hadrâ) bugün Mevlânâ Müzesi olarak ziyarete açıktır." },
+      { "soru": "Mevlevîlik nasıl kuruldu?", "cevap": "Mevlânâ'nın vefatından sonra oğlu Sultan Veled, babasının öğretilerini düzenleyerek Mevlevî tarikatını kurumsal hâle getirdi." },
+      { "soru": "UNESCO 2007 yılını neden 'Mevlânâ Yılı' ilan etti?", "cevap": "2007, Mevlânâ'nın doğumunun 800. yıl dönümüydü. UNESCO bu nedenle o yılı onun adına anma yılı ilan etti." }
     ]
   },
   "iletisim": {
@@ -77,5 +105,5 @@
     "metin": "Soruların veya önerilerin için bize ulaşabilirsin.",
     "eposta": "bilsemesenler@gmail.com"
   },
-  "footer": "© 2026 Yapay Zeka Mühendisliği Projesi. Tüm hakları saklıdır."
+  "footer": "© 2026 Mevlânâ ve Mesnevî Projesi"
 }
