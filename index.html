@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yapay Zeka Mühendisliği</title>
-  <meta name="description" content="Yapay zeka mühendisliği mesleğini tanıtan web sitesi.">
+  <title>Mevlânâ ve Mesnevî</title>
+  <meta name="description" content="Mevlânâ Celâleddîn-i Rûmî'nin hayatı, Mesnevî ve öğretileri.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
 
   <header class="ust-bar">
     <div class="kap">
-      <a href="#" class="logo" id="logo">YZ</a>
+      <a href="#" class="logo" id="logo">Mevlânâ</a>
       <button class="menu-btn" id="menuBtn" aria-label="Menü">☰</button>
       <nav id="menu"></nav>
     </div>
@@ -22,11 +22,12 @@
 
   <main>
     <section class="hero kap" id="hero"></section>
-
     <section class="bolum kap" id="hakkinda"></section>
-    <section class="bolum kap" id="alanlar"></section>
-    <section class="bolum kap" id="beceriler"></section>
-    <section class="bolum kap" id="yol"></section>
+    <section class="bolum kap" id="hayat"></section>
+    <section class="bolum kap" id="mesnevi"></section>
+    <section class="bolum kap" id="hikayeler"></section>
+    <section class="bolum kap" id="eserler"></section>
+    <section class="bolum kap" id="temalar"></section>
     <section class="bolum kap" id="sss"></section>
     <section class="bolum kap" id="iletisim"></section>
   </main>
@@ -42,84 +43,105 @@
           '<p class="hata">data.json yüklenemedi. Siteyi bir sunucu üzerinden (Netlify veya VS Code Live Server) açın.</p>';
       });
 
+    const $ = id => document.getElementById(id);
+
     function olustur(d) {
       document.title = d.site.baslik;
-      document.getElementById('logo').textContent = d.site.logo;
+      $('logo').textContent = d.site.logo;
 
       // Menü
-      document.getElementById('menu').innerHTML =
-        d.menu.map(m => `<a href="#${m.hedef}">${m.ad}</a>`).join('');
+      $('menu').innerHTML = d.menu.map(m => `<a href="#${m.hedef}">${m.ad}</a>`).join('');
 
-      // Hero
-      document.getElementById('hero').innerHTML = `
+      // Giriş
+      $('hero').innerHTML = `
+        <div class="semazen">✺</div>
         <span class="etiket">${d.hero.ust}</span>
         <h1>${d.hero.baslik}</h1>
         <p class="hero-metin">${d.hero.metin}</p>
         <a href="#hakkinda" class="btn">${d.hero.buton}</a>
         <div class="istatistik">
-          ${d.hero.istatistikler.map(i => `
-            <div><strong>${i.sayi}</strong><span>${i.etiket}</span></div>`).join('')}
+          ${d.hero.istatistikler.map(i => `<div><strong>${i.sayi}</strong><span>${i.etiket}</span></div>`).join('')}
         </div>`;
 
-      // Hakkında
-      document.getElementById('hakkinda').innerHTML = `
+      // Mevlânâ kimdir
+      $('hakkinda').innerHTML = `
         <h2>${d.hakkinda.baslik}</h2>
-        <div class="hakkinda-metin">
-          ${d.hakkinda.paragraflar.map(p => `<p>${p}</p>`).join('')}
-        </div>`;
+        <div class="paragraflar">${d.hakkinda.paragraflar.map(p => `<p>${p}</p>`).join('')}</div>`;
 
-      // Alanlar
-      document.getElementById('alanlar').innerHTML = `
-        <h2>${d.alanlar.baslik}</h2>
-        <div class="kartlar">
-          ${d.alanlar.liste.map(a => `
-            <article class="kart gorunur-ol">
-              <div class="ikon">${a.ikon}</div>
-              <h3>${a.ad}</h3>
-              <p>${a.aciklama}</p>
-            </article>`).join('')}
-        </div>`;
-
-      // Beceriler
-      document.getElementById('beceriler').innerHTML = `
-        <h2>${d.beceriler.baslik}</h2>
-        <div class="beceri-liste">
-          ${d.beceriler.liste.map(b => `
-            <div class="beceri">
-              <div class="beceri-ust"><span>${b.ad}</span><span>%${b.seviye}</span></div>
-              <div class="cubuk"><div class="dolu" data-seviye="${b.seviye}"></div></div>
-            </div>`).join('')}
-        </div>`;
-
-      // Yol haritası
-      document.getElementById('yol').innerHTML = `
-        <h2>${d.yol.baslik}</h2>
+      // Hayatı
+      $('hayat').innerHTML = `
+        <h2>${d.hayat.baslik}</h2>
         <ol class="zaman">
-          ${d.yol.adimlar.map((a, i) => `
+          ${d.hayat.adimlar.map(a => `
             <li class="gorunur-ol">
-              <span class="no">${i + 1}</span>
+              <span class="yil">${a.yil}</span>
               <div><h3>${a.baslik}</h3><p>${a.metin}</p></div>
             </li>`).join('')}
         </ol>`;
 
+      // Mesnevî
+      const m = d.mesnevi;
+      $('mesnevi').innerHTML = `
+        <h2>${m.baslik}</h2>
+        <div class="mesnevi-izgara">
+          <div class="paragraflar">${m.paragraflar.map(p => `<p>${p}</p>`).join('')}</div>
+          <div class="bilgi-kutu">
+            ${m.bilgiler.map(b => `<div><span>${b.baslik}</span><strong>${b.deger}</strong></div>`).join('')}
+          </div>
+        </div>
+        <div class="ney gorunur-ol">
+          <h3>${m.ney.baslik}</h3>
+          <p>${m.ney.metin}</p>
+        </div>`;
+
+      // Hikâyeler
+      $('hikayeler').innerHTML = `
+        <h2>${d.hikayeler.baslik}</h2>
+        <div class="kartlar">
+          ${d.hikayeler.liste.map(h => `
+            <article class="kart gorunur-ol">
+              <div class="ikon">${h.ikon}</div>
+              <h3>${h.ad}</h3>
+              <p>${h.aciklama}</p>
+            </article>`).join('')}
+        </div>`;
+
+      // Diğer eserler
+      $('eserler').innerHTML = `
+        <h2>${d.eserler.baslik}</h2>
+        <div class="eser-liste">
+          ${d.eserler.liste.map(e => `
+            <div class="eser gorunur-ol"><h3>${e.ad}</h3><p>${e.aciklama}</p></div>`).join('')}
+        </div>`;
+
+      // Öğretisi
+      $('temalar').innerHTML = `
+        <h2>${d.temalar.baslik}</h2>
+        <div class="kartlar">
+          ${d.temalar.liste.map(t => `
+            <article class="kart gorunur-ol">
+              <div class="ikon">${t.ikon}</div>
+              <h3>${t.ad}</h3>
+              <p>${t.aciklama}</p>
+            </article>`).join('')}
+        </div>`;
+
       // SSS
-      document.getElementById('sss').innerHTML = `
+      $('sss').innerHTML = `
         <h2>${d.sss.baslik}</h2>
         <div class="sss-liste">
-          ${d.sss.liste.map(s => `
-            <details><summary>${s.soru}</summary><p>${s.cevap}</p></details>`).join('')}
+          ${d.sss.liste.map(s => `<details><summary>${s.soru}</summary><p>${s.cevap}</p></details>`).join('')}
         </div>`;
 
       // İletişim
-      document.getElementById('iletisim').innerHTML = `
+      $('iletisim').innerHTML = `
         <div class="iletisim-kutu">
           <h2>${d.iletisim.baslik}</h2>
           <p>${d.iletisim.metin}</p>
           <a class="btn" href="mailto:${d.iletisim.eposta}">${d.iletisim.eposta}</a>
         </div>`;
 
-      document.getElementById('footer').textContent = d.footer;
-
+      $('footer').textContent = d.footer;
       animasyonlar();
     }
 
@@ -128,18 +150,15 @@
         girdiler.forEach(g => {
           if (!g.isIntersecting) return;
           g.target.classList.add('goster');
-          if (g.target.classList.contains('dolu')) {
-            g.target.style.width = g.target.dataset.seviye + '%';
-          }
           gozlemci.unobserve(g.target);
         });
-      }, { threshold: 0.2 });
-      document.querySelectorAll('.gorunur-ol, .dolu').forEach(e => gozlemci.observe(e));
+      }, { threshold: 0.15 });
+      document.querySelectorAll('.gorunur-ol').forEach(e => gozlemci.observe(e));
     }
 
     // Mobil menü
-    const menu = document.getElementById('menu');
-    document.getElementById('menuBtn').addEventListener('click', () => menu.classList.toggle('acik'));
+    const menu = $('menu');
+    $('menuBtn').addEventListener('click', () => menu.classList.toggle('acik'));
     menu.addEventListener('click', e => { if (e.target.tagName === 'A') menu.classList.remove('acik'); });
   </script>
 </body>
